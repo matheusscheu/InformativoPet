@@ -1,0 +1,88 @@
+/* modal - popup */
+
+#modal {
+    background-color: #4d4c7d;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content {
+    margin-top: 1%;
+    color: white;
+}
+
+#modal .content h1 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+#modal.hide {
+    opacity: 2;
+    visibility: hidden;
+}
+
+.content form div:nth-child(7) {
+    grid-column: span 2;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25, 1, 0.5);
+    outline: none;
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: end;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 400ms;
+}
+
+form a:hover {
+    background-color: #0984e3;
+    color: white;
+    text-decoration: none;
+}
+
+.buttonModal {
+    background-color: #0984e3;
+    margin-left: 52%;
+}

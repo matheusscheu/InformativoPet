@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Informativo Pet</title>
+    <!-- Importação do css global e o de estilo da pag-->
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./animais/globalPets.css">
+    <link rel="stylesheet" href="../modal.css">
+    <!--Import js-->
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../src/logo_branca.svg" alt="Imagem da logomarca">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../home.html">Home</a></li>
+                <li><a class='button' href="#" onclick='onOff()'>Novo Pet</a></li>
+                <li><a href="./Sobre/index.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cards_main">
+        <div class="card">
+            <div class="card_imagem">
+                <img src=https://www.significadodossonhos.inf.br/wp-content/uploads/2019/08/Sonhar-com-muitos-gatos2.jpg alt="gatos">
+            </div>
+            <div class="card_texto">
+                <h2>Gatos</h2>
+                <p>Os gatos tem inúmeras habilidades e é conhecido pela sua famosa autonomia e independência. </p>
+            </div>
+            <div class="card_status">
+                <a href="./animais/gato.html"><img src="https://image.flaticon.com/icons/svg/616/616430.svg" alt="Imagem de um gato"></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card_imagem">
+                <img src=https://image.cachorrogato.com.br/textimages/cachorros.jpg alt="cachorro">
+            </div>
+            <div class="card_texto">
+                <h2>Cachorros</h2>
+                <p>Fidelidade e companheirismo são algumas das características mais marcantes do cachorro, considerado o melhor amigo do homem. </p>
+            </div>
+            <div class="card_status">
+                <a href="./animais/cachorro.html"><img src="https://image.flaticon.com/icons/svg/616/616408.svg" alt="Imagem de um cachorro"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Modal referente ao formulario-->
+
+    <div id="modal" class="hide">
+        <div class="content">
+            <h1>Novo Pet</h1>
+            <form action="/" method="POST" onsubmit="return checkFields(event)">
+                <div class="input-wrapper">
+                    <label for="espécie">Animal</label>
+                    <input type="text" name="espécie">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="origem">Origem do animal</label>
+                    <input type="text" name="origem">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="porte">Porte</label>
+                    <input type="text" name="porte" list="porte">
+                </div>
+
+
+                <div class="input-wrapper">
+                    <label for="ExpectativaVida">Expectativa de vida</label>
+                    <input type="text" name="ExpectativaVida">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="linkImage">Link da foto do animal</label>
+                    <input type="url" name="linkImage">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="linkVideo">Link do vídeo do animal</label>
+                    <input type="url" name="linkVideo">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="description">Digite a descrição do animal</label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                </div>
+
+                <a href="#" onclick="onOff()">Voltar</a>
+                <a href="#" class="buttonModal">Salvar</a>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
